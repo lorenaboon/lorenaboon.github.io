@@ -1,0 +1,29 @@
+body {
+    padding: 0;
+    background: azure;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    border: 5px solid black;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    background: hotpink;
+}
+
+.grid-item > p{
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}

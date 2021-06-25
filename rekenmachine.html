@@ -1,0 +1,84 @@
+
+<html>
+    <head> 
+        <link rel=stylesheet href="home.css">
+        <link rel=stylesheet href="rekenmachine.css">   
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+        <div class="container">
+          <a class="navbar-brand" href="#">lorena</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="school.html">school</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="abonnementen.html">Over mij / projecten</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="rekenmachine.html">rekenmachine</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="rekengame.html">rekengame</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="boterkaaseigame.html">boterkaaseigame</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="puzzel.html">puzzel</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="apparaten.html">Bedrijf / stage</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="supplementen.html">Nog iets meer over mijzelf</a>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container calculator-container">
+        <p>
+          dit project is een rekenmachine die ik heb gemaakt met javascript html en css. het werkt zoals een gewone rekenmachine. U kunt het testen om een som te maken ( :
+        </p>
+        <div class="calculator">
+          <div class="calculator__display">0</div>
+    
+          <div class="calculator__keys">
+            <button class="key--operator" data-action="add">+</button>
+            <button class="key--operator" data-action="subtract">-</button>
+            <button class="key--operator" data-action="multiply">&times;</button>
+            <button class="key--operator" data-action="divide">÷</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>0</button>
+            <button data-action="decimal">.</button>
+            <button data-action="clear">AC</button>
+            <button class="key--equal" data-action="calculate">=</button>
+          </div>
+        </div>
+      </div>
+      <script src="main.js"></script>
+</body>
+</html>
