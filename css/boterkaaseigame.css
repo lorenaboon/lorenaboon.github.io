@@ -33,24 +33,24 @@ body{
 
 @keyframes normalChange{
     0% {background: violet;}
-    40% {background: black;}
+    40% {background: yellowgreen;}
     100% {background: violet;}
 }
 
 @-webkit-keyframes normalChange{ /* Safari en Chrome */
     0% {background: violet;}
-    40% {background: black;}
+    40% {background: yellowgreen;}
     00% {background: violet;}
 }
 
 @keyframes reverseChange{
     0% {background: violet; border: black solid 1px;}
-    60% {background: black;  border: white solid 1px;}
+    60% {background: yellowgreen;  border: white solid 1px;}
     100% {background: violet; border: black solid 1px;}
 }
 
 @-webkit-keyframes reverseChange{ /* Safari en Chrome */
     0% {background: violet; border: black solid 1px;}
-    60% {background: black;  border: white solid 1px;}
+    60% {background: yellowgreen;  border: white solid 1px;}
     100% {background: violet; border: black solid 1px;}
 }
