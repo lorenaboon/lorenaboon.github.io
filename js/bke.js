@@ -4,11 +4,11 @@ const players = [ ];
 let currentPlayer = 0;
 const fields = document.querySelectorAll('.grid-item');
 const resetButton = document.querySelector(".reset-btn");
-const playerOne = new Player("Player 1", "X")
-const playerTwo = new Player("Player 2", "O")
+let playerOne;
+let playerTwo;
 
-players.push(playerOne)
-players.push(playerTwo)
+const player_one_name_container = document.querySelector('.player-1-name');
+const player_two_name_container = document.querySelector('.player-2-name');
 
 
 for (let i = 0; i < fields.length; i++) {
@@ -19,6 +19,23 @@ for (let i = 0; i < fields.length; i++) {
 }
 
 resetButton.addEventListener("click", resetGame);
+
+function requestUsers() {
+    player_one_name_container.textContent = "";
+    player_two_name_container.textContent = "";
+    players.length = 0;
+
+    setTimeout(function() {
+        playerOne = new Player(prompt("Player 1 naam"), "X");
+        playerTwo = new Player(prompt("Player 2 naam"), "O");
+        players.push(...[playerOne, playerTwo]);
+    
+        player_one_name_container.textContent = playerOne.name;
+        player_two_name_container.textContent = playerTwo.name;
+    }, 1);
+}
+
+requestUsers();
 
 // Symbool word toegevoegd
 function addSymbolToField(field) {
@@ -35,8 +52,10 @@ function addSymbolToField(field) {
             field.textContent = "O";
             currentPlayer = 0;
         }
+        setTimeout(function() {
+            checkWinner();
+        }, 100);
     }
-    checkWinner()
 
 }
 
@@ -50,6 +69,7 @@ function checkWinner() {
     const winline6 = [fields[2].textContent, fields[5].textContent, fields[8].textContent];
     const winline7 = [fields[0].textContent, fields[4].textContent, fields[8].textContent];
     const winline8 = [fields[2].textContent, fields[4].textContent, fields[6].textContent];
+
     if (winline1[0] == "X" && winline1[1] == "X" && winline1[2] == "X") {
             alert("Player 1 heeft gewonnen!");
     }
@@ -104,8 +124,8 @@ function resetGame() {
     currentPlayer = 0;
     for (let i = 0; i < fields.length; i++) {
         const field = fields[i];
-        field.textContent = "-"
+        field.textContent = "-";
     }
-}
 
-console.log('File loaded');
+    requestUsers();
+}
